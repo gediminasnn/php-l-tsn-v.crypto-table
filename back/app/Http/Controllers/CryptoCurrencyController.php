@@ -16,8 +16,8 @@ class CryptoCurrencyController extends Controller
 
     public function index(Request $request)
     {
-        $searchTerm = $request->input('search', '');
-        $perPage = $request->input('perPage', 100);
+        $searchTerm = $request->input('search') ?? '';
+        $perPage = $request->input('perPage') ?? 25;
 
         $query = $this->cryptoCurrencyRepository->findByTermOrAllAndPaginate($searchTerm, $perPage);
 
