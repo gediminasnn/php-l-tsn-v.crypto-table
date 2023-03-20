@@ -1,4 +1,5 @@
 @import './base.css';
+@import "bootstrap";
 
 #app {
   max-width: 1280px;
@@ -29,7 +30,7 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    width: 100%;
+    max-width: 1024px;
   }
 }
